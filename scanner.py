@@ -1,3 +1,11 @@
+import argparse
+from Object import PortScanner
+
+def parse_port_range(port_range):
+    start, end = map(int, port_range.split('-'))
+    return range(start, end + 1)
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Simple Port Scanner")
     parser.add_argument("action", choices=["scan"], help="Action to perform (e.g., 'scan')")
