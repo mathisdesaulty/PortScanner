@@ -17,4 +17,3 @@ if __name__ == "__main__":
     if args.action == "scan":
         scanner = PortScanner(args.target)
         print(scanner.getServices(args.ports[0], args.ports[1]))
-        
