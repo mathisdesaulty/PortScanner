@@ -1,9 +1,9 @@
 import argparse
-from Object import PortScanner
+from Object.port_scanner import PortScanner
 
 def parse_port_range(port_range):
     start, end = map(int, port_range.split('-'))
-    return range(start, end + 1)
+    return (start, end)
 
 
 if __name__ == "__main__":
@@ -13,7 +13,8 @@ if __name__ == "__main__":
     parser.add_argument("ports", type=parse_port_range, help="Port range to scan (e.g., '1-1100')")
 
     args = parser.parse_args()
-
+    print(args.ports)
     if args.action == "scan":
         scanner = PortScanner(args.target)
-        scanner.scan_ports(args.ports)
+        print(scanner.getServices(args.ports[0], args.ports[1]))
+        
