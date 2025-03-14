@@ -70,7 +70,7 @@ if __name__ == "__main__":
 
 ## Authors
 
-- [Your Name](https://github.com/your-username)
+- [Mathis Desaulty](https://github.com/mathisdesaulty)
 
 ## License
 
